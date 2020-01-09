@@ -7,16 +7,27 @@
       <link href="styles/style.css" rel="stylesheet">
   </head>
   <body>
-      <div class ="navbar-container">
+      <nav class ="navbar-container" role="navigation">
           <ul class="navbar">
             <li class="nav-left navbar-item">
                   <a href="index.html">Sing in | Join</a>
               </li>
 
               <li class ="navbar-item">
-                  <a href="index.html">News</a>
+                  <a href="index.html" aria-haspopup="true">News</a>
                   <div class="flexbox">
                       <div class="flexbox-title">Trending news</div>
+                      <div class="flexbox-category-container">
+                          <ul  class="flexbox-category" aria-label="submenu">
+                              <li class="flexbox-category-item"><a href="index.html">Category</a></li>
+                              <li class="flexbox-category-item"><a href="index.html">Category</a></li>
+                              <li class="flexbox-category-item"><a href="index.html">Category</a></li>
+                              <li class="flexbox-category-item"><a href="index.html">Category</a></li>
+<!--                          <a href="index.html" class="flexbox-category-item">Category</a>
+                          <a href="index.html" class="flexbox-category-item">Category</a>
+                          <a href="index.html" class="flexbox-category-item">Category</a>-->
+                          </ul>
+                      </div>
                       <div class="flexbox-item">
                           <a href="index.html"><img src="images/post.jpg" alt="My test image" class="flexbox-image"></a>
                           <div class="flexbox-text-title">
@@ -52,18 +63,7 @@
                           <div class="flexbox-text">
                               <a href="index.html">Lorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet</a>
                           </div>
-                      </div>
-                      <div class="flexbox-category-container">
-                          <ul  class="flexbox-category">
-                              <li class="flexbox-category-item"><a href="index.html">Category</a></li>
-                              <li class="flexbox-category-item"><a href="index.html">Category</a></li>
-                              <li class="flexbox-category-item"><a href="index.html">Category</a></li>
-                              <li class="flexbox-category-item"><a href="index.html">Category</a></li>
-<!--                          <a href="index.html" class="flexbox-category-item">Category</a>
-                          <a href="index.html" class="flexbox-category-item">Category</a>
-                          <a href="index.html" class="flexbox-category-item">Category</a>-->
-                          </ul>
-                      </div>
+                      </div>   
                   </div>
               </li>
               <li class="navbar-item">
@@ -81,7 +81,7 @@
               <li class="nav-right navbar-item"> <a href="index.html">Search</a>
               </li>
           </ul>
-      </div>
+      </nav>
       
       <div class="about-me-outter">
       <div class="about-me-inner">
