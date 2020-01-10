@@ -1,5 +1,5 @@
 !(function(d){
-    var itemClassName = "carousel-photo";
+    var itemClassName = "carousel-slide";
     items = d.getElementsByClassName(itemClassName),
         totalItems = items.length,
         slide = 0,
