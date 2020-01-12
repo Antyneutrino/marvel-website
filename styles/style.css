@@ -373,7 +373,6 @@ li.flexbox-category-item a:focus-within{
     object-fit: cover;
 }
 .carousel-track-container{
-    background-color: antiquewhite;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -405,6 +404,8 @@ li.flexbox-category-item a:focus-within{
     #border-radius: 50%;
     cursor: pointer;
     transition: all.5s ease;
+    border: 0;
+    outline: none;
 }
 .carousel-button-prev:hover,
 .carousel-button-next:hover{
@@ -446,6 +447,12 @@ li.flexbox-category-item a:focus-within{
     background-color: transparent;
     margin: 0 .5%;
     cursor: pointer;
+    outline: none;
+    transition: all.5s ease;
+}
+
+.carousel-indicator:hover{
+    background-color: white;
 }
 .current-slide{
    background: white;
