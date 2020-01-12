@@ -360,39 +360,100 @@ li.flexbox-category-item a:focus-within{
 }
 
 /*Carousel*/
-.carousel-wrapper{
-    overflow: hidden;
-    width: 100%;
+.carousel{
+    position: relative;
     height: 540px;
-    margin-top: 0;
-}
-.carousel-wrapper *{
-    box-sizing: border-box;
-}
-.carousel {
-    transform-style: preserve-3d;
-}
-.carousel-slide {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 540px;
-    z-index: 100;
-    transition: transform .5s, opacity .5s, z-index .5s;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2%;
 }
 .carousel-photo{
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
     height: 100%;
-    #object-position: center;
     object-fit: cover;
+}
+.carousel-track-container{
+    background-color: antiquewhite;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    #transform: translate(-100%);
+}
+.carousel-track{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 100%;
+    transition: all.5s ease;
+}
+.carousel-slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.carousel-button-prev,
+.carousel-button-next{
+    position: absolute;
+    #z-index: 998;
+    #top: 47.5%;
+    width: 5%;
+    height: 100%;
+    background-color: transparent;
+    #opacity: 0.2;
+    transform: translateY(-50%);
+    #border-radius: 50%;
+    cursor: pointer;
+    transition: all.5s ease;
+}
+.carousel-button-prev:hover,
+.carousel-button-next:hover{
+    background-color: black;
+    width: 4%;
+}
+.carousel-button{
+    position: absolute;
+    z-index: 990;
+    top: 50%;
+    transform: translateY(-50%);
+    #background-color: white;
+    border: 0;
+    cursor: pointer;
+}
+.carousel-button img{
+    width: 80%;
+    filter: invert(100%);
+}
+.carousel-button-prev{
+    left: -4%;
+}
+.carousel-button-next{
+    right: -4%;
+}
+.carousel-nav{
+    display: flex;
+    justify-content: center;
+    padding: .5% 0;
+    height: 3%;
+}
+.carousel-indicator{
+    border: 2px solid white;
+    border-radius: 2px;
+    #clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+    #border-radius: 50%;
+    width: 1%;
+    height: 100%;
+    background-color: transparent;
+    margin: 0 .5%;
+    cursor: pointer;
+}
+.current-slide{
+   background: white;
 }
 .slide-info{
     position: absolute;
     z-index: 996;
-    background-color: aqua;
-    left: 9.99%;
+    left: -0.1%;
     top: 0;
     width: 25%;
     height: 100%;
@@ -404,7 +465,7 @@ li.flexbox-category-item a:focus-within{
     line-height: 2;
     width: 50%;
     margin: 0 auto;
-    margin-top: 40%;
+    margin-top: 50%;
     background-color: gold;
     clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
     text-align: center;
@@ -427,72 +488,15 @@ li.flexbox-category-item a:focus-within{
     text-align: left;
     text-transform: capitalize;
 }
-.carousel-slide.initial,
-.carousel-slide.active{
-    opacity: 1;
-    position: relative;
-}
-.carousel-slide.prev{
-    transform: translateX(-100%);
-}
-.carousel-slide.next{
-    transform: translateX(100%);
-}
-.carousel-button-prev,
-.carousel-button-next{
-    position: absolute;
-    z-index: 998;
-    top: 47.5%;
-    width: 5%;
-    height: 600px;
-    background-color: transparent;
-    #opacity: 0.2;
-    transform: translateY(-50%);
-    #border-radius: 50%;
-    cursor: pointer;
-    transition: all.5s ease;
-    #border: 1px solid white;
-}
-.carousel-button-prev{
-    left: 0;
-    margin-left: 10%;
-}
-.carousel-button-next{
-    right: 0;
-    margin-right: 10%;
-}
-.carousel-button-prev:hover,
-.carousel-button-next:hover{
-    #opacity: 1;
-    background-color: black;
-    width: 4%;
-}
-.carousel-button-prev-icon,
-.carousel-button-next-icon{
-    position: absolute;
-    top: 50%;
-    left: 54%;
-    background-color: transparent;
-    border-right: 2px solid white;
-    border-bottom: 2px solid white;
-    transform: translate(-50%, -50%) rotate(135deg);
-    width: 30px;
-    height: 30px;
-    opacity: 1;
-}
-.carousel-button-next-icon{
-    left: 47%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
 .carousel-link {
     position: absolute;
     z-index: 997;
     background-color: transparent;
     cursor: pointer;
-    top: 0;
-    left: 15%;
-    width: 20%;
-    height: 100%;
+    top: 30%;
+    left: 5%;
+    width: 15%;
+    height: 30%;
 }
 /*Footer*/
 .footer-wrapper{
@@ -548,7 +552,7 @@ li.flexbox-category-item a:focus-within{
     #height: 40px;
     line-height: 40px;
     font-size: 30px;
-    text-align: left;
+    text-align: right;
 }
 .fa {
     #width: 20px;
