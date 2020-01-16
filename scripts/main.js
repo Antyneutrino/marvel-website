@@ -74,3 +74,16 @@ dotsNav.addEventListener('click', e => {
     targetDot.classList.add('current-slide');
 })
 
+const searchButton = document.querySelector('.nav-right');
+const searchText = document.querySelector('.search-text');
+searchButton.addEventListener('click', e=> {
+    document.querySelector('.search-text').style.display = 'none';
+    document.querySelector('.search-text').style.visibility = 'hidden';
+    document.querySelector('.search-container').style.display = 'inline-flex';
+    document.querySelector('.search-container').style.visibility = 'visible';
+    document.querySelector('.search-container').style.width = '16%';
+    document.querySelector('.nav-right').style.width = '16%';
+    document.querySelector('.nav-right').style.marginLeft = '5.5%';
+    document.querySelector('.nav-right').style.cursor = 'default';
+    document.querySelector('.nav-right').style.backgroundColor = 'black';
+})
